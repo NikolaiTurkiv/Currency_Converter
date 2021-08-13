@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        style="@style/fragment_layout_style"
+        tools:context=".screens.choice.first.FirstChoiceFragment">
+
+        <include layout="@layout/toolbar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerViewChoice"
+            style="@style/recycler_view_choice_fragment_style" />
+    </LinearLayout>
+</layout>

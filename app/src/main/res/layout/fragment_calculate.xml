@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.calculate.CalculateFragment">
+
+        <EditText
+            android:id="@+id/editTextFirstCurrency"
+            style="@style/editTextSumStyle"
+            android:hint="@string/enter_sum_edit_text"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/editTextSecondCurrency"
+            style="@style/editTextSumStyle"
+            android:hint="@string/place_summ_edit_text"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            style="@style/arrow_style"
+            android:src="@drawable/double_sided_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal"
+            android:contentDescription="@string/image_arrow_two_side" />
+
+        <TextView
+            android:id="@+id/textViewCharCodeFirstCurrency"
+            style="@style/text_view_choice_currency_style"
+            android:text="@string/choice_currency"
+            app:layout_constraintEnd_toEndOf="@+id/editTextFirstCurrency"
+            app:layout_constraintStart_toStartOf="@+id/editTextFirstCurrency"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/textViewCharCodeSecondCurrency"
+            style="@style/text_view_choice_currency_style"
+            android:text="@string/choice_currency"
+            app:layout_constraintEnd_toEndOf="@+id/editTextSecondCurrency"
+            app:layout_constraintStart_toStartOf="@+id/editTextSecondCurrency"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonChangeCurrencyFirst"
+            style="@style/button_change_value_style"
+            android:text="@string/change_currency"
+            app:layout_constraintEnd_toEndOf="@+id/textViewCharCodeFirstCurrency"
+            app:layout_constraintStart_toStartOf="@+id/textViewCharCodeFirstCurrency"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCharCodeFirstCurrency" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonChangeCurrencySecond"
+            style="@style/button_change_value_style"
+            android:text="@string/change_currency"
+            app:layout_constraintEnd_toEndOf="@+id/textViewCharCodeSecondCurrency"
+            app:layout_constraintStart_toStartOf="@+id/textViewCharCodeSecondCurrency"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCharCodeSecondCurrency" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal"
+            style="@style/guidline_style"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVertical"
+            style="@style/guidline_style"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
